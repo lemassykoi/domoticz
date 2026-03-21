@@ -428,6 +428,9 @@
                     id: 'PRDSS1',
                     dataItemKeys: ['r1'],
                     dataIsValid: function (data) {
+                        if (data.R1Name) {
+                            this.template.name = data.R1Name;
+                        }
                         return data.delivered === true;
                     },
                     showWithoutDatapoints: false,
@@ -453,6 +456,9 @@
                     id: 'PRDSS2',
                     dataItemKeys: ['r2'],
                     dataIsValid: function (data) {
+                        if (data.R2Name) {
+                            this.template.name = data.R2Name;
+                        }
                         return data.delivered === true;
                     },
                     showWithoutDatapoints: false,
