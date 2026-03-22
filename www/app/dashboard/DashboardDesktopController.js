@@ -691,8 +691,7 @@ define([
 					}
 				}
 
-				var usedFilter = window.myglobals.LastPlanSelected > 0 ? 'all' : 'true';
-			livesocket.getJson("json.htm?type=command&param=getdevices&filter=all&used=" + usedFilter + "&favorite=" + bFavorites + "&order=[Order]&plan=" + window.myglobals.LastPlanSelected + "&lastupdate=" + $scope.LastUpdateTime, function (data) {
+			livesocket.getJson("json.htm?type=command&param=getdevices&filter=all&used=true&favorite=" + bFavorites + "&order=[Order]&plan=" + window.myglobals.LastPlanSelected + "&lastupdate=" + $scope.LastUpdateTime, function (data) {
 					if (typeof data.ServerTime != 'undefined') {
 						$rootScope.SetTimeAndSun(data.Sunrise, data.Sunset, data.ServerTime);
 					}

@@ -35,7 +35,7 @@ define(['app', 'domoticz.api', 'livesocket'], function(app) {
                     type: 'command',
                     param: 'getdevices',
                     filter: 'all',
-                    used: selectedPlan > 0 ? 'all' : 'true',
+                    used: 'true',
                     favorite: bFavorites,
                     order: '[Order]',
                     plan: selectedPlan
